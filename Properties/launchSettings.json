@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProcessWatcher": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Windows\\System32\\notepad.exe"
+    }
+  }
+}
