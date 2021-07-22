@@ -60,7 +60,11 @@
 
             this.FormClosing += this.OnFormClosing;
             this.Shown += this.OnFormShown;
-            SystemEvents.PowerModeChanged += this.OnPowerModeChanged;
+
+            if (OperatingSystem.IsWindows())
+            {
+                SystemEvents.PowerModeChanged += this.OnPowerModeChanged;
+            }
 
             this.InitializeComponent();
         }
@@ -212,7 +216,11 @@
             {
                 this.shuttingDown = true;
                 this.quitButton.Enabled = false;
-                SystemEvents.PowerModeChanged -= this.OnPowerModeChanged;
+
+                if (OperatingSystem.IsWindows())
+                {
+                    SystemEvents.PowerModeChanged -= this.OnPowerModeChanged;
+                }
 
                 if (this.processWatcher.IsRunning)
                 {
@@ -235,11 +243,14 @@
         /// <param name="e">The event arguments.</param>
         private void OnPowerModeChanged(object sender, PowerModeChangedEventArgs e)
         {
-            switch (e.Mode)
+            if (OperatingSystem.IsWindows())
             {
-                case PowerModes.Resume:
-                    this.CloseApplication();
-                    break;
+                switch (e.Mode)
+                {
+                    case PowerModes.Resume:
+                        this.CloseApplication();
+                        break;
+                }
             }
         }
 
