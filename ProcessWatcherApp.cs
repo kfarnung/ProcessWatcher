@@ -170,7 +170,9 @@
         {
             this.BeginInvoke(new Action(() =>
                 {
-                    this.Activate();
+                    // Make this the foreground window and show it if necessary.
+                    User32.SetForegroundWindow(this.Handle);
+                    User32.ShowWindow(this.Handle, User32.SW_NORMAL);
 
                     if (!this.shuttingDown)
                     {

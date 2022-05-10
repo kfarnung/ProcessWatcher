@@ -37,20 +37,21 @@
             // 
             this.statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.Location = new System.Drawing.Point(13, 13);
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statusLabel.Location = new System.Drawing.Point(28, 32);
+            this.statusLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(453, 29);
+            this.statusLabel.Size = new System.Drawing.Size(982, 71);
             this.statusLabel.TabIndex = 0;
-            this.statusLabel.Text = "label1";
             // 
             // quitButton
             // 
             this.quitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.quitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quitButton.Location = new System.Drawing.Point(350, 295);
+            this.quitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quitButton.Location = new System.Drawing.Point(758, 726);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(116, 36);
+            this.quitButton.Size = new System.Drawing.Size(251, 89);
             this.quitButton.TabIndex = 1;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
@@ -61,22 +62,24 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(13, 46);
+            this.textBox1.Location = new System.Drawing.Point(28, 113);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(453, 243);
+            this.textBox1.Size = new System.Drawing.Size(977, 592);
             this.textBox1.TabIndex = 2;
             // 
             // ProcessWatcherApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 343);
+            this.ClientSize = new System.Drawing.Size(1036, 844);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.statusLabel);
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "ProcessWatcherApp";
             this.Text = "ProcessWatcher";
             this.ResumeLayout(false);
