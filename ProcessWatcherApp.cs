@@ -170,6 +170,8 @@
         {
             this.BeginInvoke(new Action(() =>
                 {
+                    this.Activate();
+
                     if (!this.shuttingDown)
                     {
                         this.numTicksRemaining = Settings.Default.CountdownTimer;
